@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const Model = new (require('./model'))();
 
 
-// @route   GET api/book/:id
+// @route   GET api/user/:id
 // @desc    get one
 exports.logIn = async (req, res, next) => {
   const result = await Model.logIn(req.body);
@@ -18,7 +18,7 @@ exports.logIn = async (req, res, next) => {
   return res.status(200).json({ result: result.data });
 };
 
-// @route   POST api/book
+// @route   POST api/user
 // @desc    add one
 exports.add = async (req, res, next) => {
   const result = await Model.addOne(req.body);

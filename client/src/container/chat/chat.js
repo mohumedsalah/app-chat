@@ -22,7 +22,7 @@ class chat extends Component {
     })
     this.state = {
       users: [
-        {
+        /*{
           name: "salah",
           id: 1,
           messagesRecived: [
@@ -43,7 +43,7 @@ class chat extends Component {
           messagesSend: [
             { content: "find", date: new Date() },
             { content: "find y omar", date: new Date() }],
-        },
+        },*/
       ], messagesViews: [
       ],
       currentUserName: "",
