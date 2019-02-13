@@ -9,7 +9,11 @@ class ChatWithSocket extends Component {
     this.state = {};
   }
   render() {
-    const socket = io.connect('/');
+    const url =
+  process.env.NODE_ENV === 'production'
+    ? '/'
+    : 'http://localhost:8000/';
+    const socket = io.connect(url);
     return (
       <SocketProvider socket={socket}>
         <Chat />
